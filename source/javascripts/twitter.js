@@ -8,14 +8,14 @@ function prettyDate(time) {
   }
   var say = {
     just_now:    " now",
-    minute_ago:  "1m",
-    minutes_ago: "m",
-    hour_ago:    "1h",
-    hours_ago:   "h",
-    yesterday:   "1d",
-    days_ago:    "d",
-    last_week:   "1w",
-    weeks_ago:   "w"
+    minute_ago:  "1 minute ago",
+    minutes_ago: " minutes ago",
+    hour_ago:    "1 hour ago",
+    hours_ago:   " hours ago",
+    yesterday:   "1 day ago",
+    days_ago:    " days ago",
+    last_week:   "1 week ago",
+    weeks_ago:   " weeks ago"
   };
 
   var current_date = new Date(),
@@ -59,10 +59,17 @@ function linkifyTweet(text, url) {
 
 function showTwitterFeed(tweets, twitter_user) {
   var timeline = document.getElementById('tweets'),
-      content = '';
+      content = '<li class="nav-header">Latest Tweets</li>';
 
   for (var t in tweets) {
-    content += '<li>'+'<p>'+'<a href="http://twitter.com/'+twitter_user+'/status/'+tweets[t].id_str+'">'+prettyDate(tweets[t].created_at)+'</a>'+linkifyTweet(tweets[t].text.replace(/\n/g, '<br>'), tweets[t].entities.urls)+'</p>'+'</li>';
+    content += '<li>';
+    content += '<a href="http://twitter.com/'+twitter_user+'/status/'+tweets[t].id_str+'">';
+    content += prettyDate(tweets[t].created_at);
+    content += '</a>';
+    content += '<p>';
+    content += linkifyTweet(tweets[t].text.replace(/\n/g, '<br>'), tweets[t].entities.urls);
+    content += '</p>';
+    content += '</li>';
   }
   timeline.innerHTML = content;
 }
