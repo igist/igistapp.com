@@ -4,10 +4,10 @@
   <title><![CDATA[iGist]]></title>
   <link href="http://igist.github.com/atom.xml" rel="self"/>
   <link href="http://igist.github.com/"/>
-  <updated>2012-04-25T06:52:23+09:00</updated>
+  <updated>2012-04-25T07:03:19+09:00</updated>
   <id>http://igist.github.com/</id>
   <author>
-    <name><![CDATA[LittleApps Inc.]]></name>
+    <name><![CDATA[Atsushi Nagase]]></name>
     
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
