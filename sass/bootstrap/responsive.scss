@@ -200,9 +200,7 @@
   }
   // Account for brand name
   .navbar .brand {
-    padding-left: 10px;
-    padding-right: 10px;
-    margin: 0 0 0 -5px;
+    margin-left: 15px;
   }
   // Nav collapse clears brand
   .navbar .nav-collapse {
@@ -230,7 +228,6 @@
   .navbar .nav > li > a,
   .navbar .dropdown-menu a {
     padding: 6px 15px;
-    font-weight: bold;
     color: $navbarLinkColor;
     @include border-radius(3px);
   }

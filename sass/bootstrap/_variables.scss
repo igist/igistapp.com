@@ -66,13 +66,13 @@ $hrBorder:              $grayLighter !default;
 
 // Navbar
 $navbarHeight:                    40px !default;
-$navbarBackground:                $grayDarker !default;
-$navbarBackgroundHighlight:       $grayDark !default;
+$navbarBackground:                #eee;
+$navbarBackgroundHighlight:       #fff;
 $navbarLinkBackgroundHover:       transparent !default;
 
-$navbarText:                      $grayLight !default;
-$navbarLinkColor:                 $grayLight !default;
-$navbarLinkColorHover:            $white !default;
+$navbarText:                      $grayDark;
+$navbarLinkColor:                 $grayDark;
+$navbarLinkColorHover:            $grayDarker;
 
 // Form states and alerts
 $warningText:             #c09853 !default;

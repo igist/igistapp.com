@@ -28,16 +28,16 @@
   margin-left: 5px;
   margin-right: 5px;
   @include buttonBackground($navbarBackgroundHighlight, $navbarBackground);
-  $shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 1px 0 rgba(255,255,255,.075);
+  $shadow: inset 0 1px 0 rgba(0,0,0,.1), 0 1px 0 rgba(0,0,0,.075);
   @include box-shadow($shadow);
 }
 .btn-navbar .icon-bar {
   display: block;
   width: 18px;
   height: 2px;
-  background-color: #f5f5f5;
+  background-color: #999;
   @include border-radius(1px);
-  @include box-shadow(0 1px 0 rgba(0,0,0,.25));
+  @include box-shadow(0 1px 0 rgba(0,0,0,.1));
 }
 .btn-navbar .icon-bar + .icon-bar {
   margin-top: 3px;
@@ -45,6 +45,13 @@
 // Override the default collapsed state
 .nav-collapse.collapse {
   height: auto;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio:2) {
+    html .navbar .brand {
+        background-image:url(/images/logo@2x.png);
+        background-size:62px 40px;
+    }
 }
 
 
@@ -58,12 +65,12 @@
   .brand {
     float: left;
     display: block;
-    padding: 8px 20px 12px;
-    margin-left: -20px; // negative indent to left-align the text down the page
-    font-size: 20px;
-    font-weight: 200;
-    line-height: 1;
-    color: $white;
+    padding: 0;
+    font-size:1px;
+    width:72px;
+    height:40px;
+    background:url(/images/logo.png) no-repeat 0 0;
+    text-indent:-9999px;
   }
   // Plain text in topbar
   .navbar-text {
@@ -198,7 +205,7 @@
   line-height: 19px;
   color: $navbarLinkColor;
   text-decoration: none;
-  text-shadow: 0 -1px 0 rgba(0,0,0,.25);
+  text-shadow: none;
 }
 // Hover
 .navbar .nav > li > a:hover {

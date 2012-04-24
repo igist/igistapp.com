@@ -5,8 +5,8 @@
 url: http://igist.github.com
 title: iGist
 subtitle: The Gist Client for iOS
-author: Atsushi Nagase
-simple_search: http://google.com/search
+author: LittleApps Inc.
+simple_search: 
 description:
 
 # Default date format is "ordinal" (resulting in "July 22nd 2007")
@@ -58,13 +58,13 @@ default_asides: [asides/recent_posts.html, asides/github.html, asides/twitter.ht
 # ----------------------- #
 
 # Github repositories
-github_user: ngs
+github_user:
 github_repo_count: 0
 github_show_profile_link: true
 github_skip_forks: true
 
 # Twitter
-twitter_user: ngs
+twitter_user: 
 twitter_tweet_count: 4
 twitter_show_replies: false
 twitter_follow_button: true
@@ -77,7 +77,7 @@ google_plus_one_size: medium
 
 # Google Plus Profile
 # Hidden: No visible button, just add author information to search results
-googleplus_user: 111720548272107554096
+googleplus_user:
 googleplus_hidden: true
 
 # Pinboard
@@ -85,7 +85,7 @@ pinboard_user:
 pinboard_count: 3
 
 # Delicious
-delicious_user:
+delicious_user: 
 delicious_count: 3
 
 # Disqus Comments
