@@ -8,7 +8,7 @@ og:
 %header
   .container
     %h1#brand #{@site.config[:title]}
-    %h2#subtitle #{ simple_line_break @site.config[:description][@lang] }
+    %h2#subtitle #{ simple_line_break @site.config[:description][:ja] }
     %p#appstore
       = link_to('Available on the Mac App Store', 'http://s.liap.us/everdesktopjp')
 

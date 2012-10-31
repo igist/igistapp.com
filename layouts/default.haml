@@ -1,6 +1,6 @@
 !!! 5
 -
-- @lang = ( @item && @item[:lang] ? @item[:lang] : 'en').to_sym
+- @lang = ( @item[:lang] || 'en').to_sym
 - @description = @site.config[:description][@lang].gsub(/\n/, '')
 - @locale     = @lang == :ja ? 'ja_JP' : 'en_US'
 - @alt_locale = @lang != :ja ? 'ja_JP' : 'en_US'
