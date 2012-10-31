@@ -2,7 +2,7 @@ source :rubygems
 
 gem 'rack'
 
-group :development, :localhost do
+group :development do
   gem 'builder'
   gem 'mime-types'
   gem 'adsf'
