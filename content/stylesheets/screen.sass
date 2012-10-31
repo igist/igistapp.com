@@ -22,17 +22,17 @@ a
   padding: 0 50px
   margin: 0 auto
   position: relative
+  +clearfix
 
 header
   .container
-
     background: url(http://static.liap.us.s3.amazonaws.com/everdesktop/icon_256x256.png) no-repeat 0 50%
     background-size: 256px 256px
     height: 306px
 
     @media only screen and (-webkit-min-device-pixel-ratio: 2),(-webkit-min-device-pixel-ratio: 1.5)
       background-image: url(http://static.liap.us.s3.amazonaws.com/everdesktop/icon_256x256@2x.png)
-    
+
     h1
       padding: 80px 0 0 196px
       margin: 0
@@ -44,7 +44,7 @@ header
       font-size: 1.2em
       font-weight: normal
       +single-text-shadow(0, 0, 5px, false, #ccc)
-      
+
     #appstore
       padding: 25px 0 0 196px
       margin: 0
@@ -63,7 +63,7 @@ header
         text-indent: -9999px
         &:hover
           +opacity(1.0)
-    
+
 #product-description
   +clearfix
   padding-bottom: 5em
@@ -98,7 +98,7 @@ header
     background-position: 0 -100%
   @media only screen and (-webkit-min-device-pixel-ratio: 2),(-webkit-min-device-pixel-ratio: 1.5)
     background-image: url(http://static.liap.us.s3.amazonaws.com/img/icon-bug@2x.png)
-    
+
 
 footer
   padding: 3em 0
@@ -110,7 +110,7 @@ footer
       color: #666
   address
     font-style: normal
-    
+
   #locales
     float: right
     list-style: none
@@ -123,4 +123,6 @@ footer
         font-style: normal
       &.ja
         margin-top: -0.1em
-      
+
+#social
+  padding-bottom: 40px

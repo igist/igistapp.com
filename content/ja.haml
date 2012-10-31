@@ -1,12 +1,14 @@
 ---
 alt_lang: '/'
 lang: ja
+og:
+  url: 'http://everdesktop.com/jp/'
 ---
 
 %header
   .container
     %h1#brand #{@site.config[:title]}
-    %h2#subtitle #{ simple_line_break @site.config[:description][@item[:lang].to_sym] }
+    %h2#subtitle #{ simple_line_break @site.config[:description][@lang] }
     %p#appstore
       = link_to('Available on the Mac App Store', 'http://s.liap.us/everdesktopjp')
 
@@ -33,4 +35,7 @@ lang: ja
       お気軽に課題を報告、または新機能をリクエストしてください。
     %p
       = link_to('<i class="icon-bug"></i> BitBucket プロジェクトに課題を追加する。', 'https://bitbucket.org/littleapps/everdesktop/issues')
+#social
+  .container
+    = fb_likebutton('https://www.facebook.com/EverDesktop')
 

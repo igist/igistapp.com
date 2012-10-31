@@ -6,7 +6,7 @@ lang: en
 %header
   .container
     %h1#brand #{@site.config[:title]}
-    %h2#subtitle #{ simple_line_break @site.config[:description][@item[:lang].to_sym] }
+    %h2#subtitle #{ simple_line_break @site.config[:description][@lang] }
     %p#appstore
       = link_to('Available on the Mac App Store', 'http://s.liap.us/everdesktop')
 
@@ -34,3 +34,6 @@ lang: en
       Feel free to report problems or request features.
     %p
       = link_to('<i class="icon-bug"></i> Create an issue on our BitBucket project.', 'https://bitbucket.org/littleapps/everdesktop/issues')
+#social
+  .container
+    = fb_likebutton('https://www.facebook.com/EverDesktop')

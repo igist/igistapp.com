@@ -4,8 +4,18 @@ description:
   ja: |
     ディスクトップ上にあるファイルを Evernote にクリップするための、
     小さな Mac アプリケーション。
+
 title: EverDesktop
 
+og:
+  image:
+    '': 'http://everdesktop.s3.amazonaws.com/icons/icon_512x512@2x.png'
+    secure_url: 'https://everdesktop.s3.amazonaws.com/icons/icon_512x512@2x.png'
+    width: 1024
+    height: 1024
+    type: 'image/jpeg'
+  url: 'http://everdesktop.com/'
+  type: softare
 
 # A list of file extensions that nanoc will consider to be textual rather than
 # binary. If an item with an extension not in this list is found,  the file
