@@ -1,0 +1,5 @@
+.DS_Store
+.sass_cache
+crash.log
+tmp/*
+.sass-cache

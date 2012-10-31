@@ -1,0 +1,7 @@
+# nanoc template
+
+* haml
+* coffeescript
+* compass
+* sass
+
