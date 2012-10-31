@@ -13,7 +13,7 @@ og:
     secure_url: 'https://everdesktop.s3.amazonaws.com/icons/icon_512x512@2x.png'
     width: 1024
     height: 1024
-    type: 'image/jpeg'
+    type: 'image/png'
   url: 'http://everdesktop.com/'
   type: software
 
