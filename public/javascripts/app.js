@@ -1,1 +1,1 @@
-(function(){$(function(){return function(){return console.log(this)}()})}).call(this);
+(function(){}).call(this);
