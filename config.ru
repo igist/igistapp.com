@@ -1,6 +1,5 @@
-#
-# https://devcenter.heroku.com/articles/static-sites-on-heroku
-#
+require 'rubygems'
+
 use Rack::Static,
   :urls => ["/stylesheets", "/images", "/javascripts"],
   :root => "public"
