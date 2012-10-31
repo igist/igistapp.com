@@ -2,7 +2,7 @@
 # https://devcenter.heroku.com/articles/static-sites-on-heroku
 #
 use Rack::Static, 
-  :urls => ["/stylesheets", "/images", "/javascripts"],
+  :urls => ["/stylesheets", "/images", "/javascripts", '/ja'],
   :root => "public"
 
 run lambda { |env|
