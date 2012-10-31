@@ -6,7 +6,7 @@ lang: en
 %header
   .container
     %h1#brand #{@site.config[:title]}
-    %h2#subtitle #{@site.config[:description][@item[:lang]]}
+    %h2#subtitle #{@site.config[:description][@item[:lang].to_sym]}
     %p#appstore
       = link_to('Available on the Mac App Store', 'http://s.liap.us/everdesktop')
 
