@@ -3,15 +3,16 @@ source :rubygems
 gem 'rack'
 
 group :development do
-  gem 'builder'
-  gem 'mime-types'
   gem 'adsf'
   gem 'albino'
-  gem 'compass'
-  gem 'nanoc'
   gem 'bluecloth'
-  gem 'rake'
-  gem 'haml'
-  gem 'sass'
+  gem 'builder'
   gem 'coffee-script'
+  gem 'compass'
+  gem 'haml'
+  gem 'mime-types'
+  gem 'nanoc'
+  gem 'rake'
+  gem 'sass'
+  gem 'uglifier'
 end
