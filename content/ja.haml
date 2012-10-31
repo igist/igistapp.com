@@ -1,0 +1,38 @@
+---
+alt_lang: '/'
+lang: ja
+---
+
+%header
+  .container
+    %h1#brand #{@site.config[:title]}
+    %h2#subtitle #{@site.config[:description][@item[:lang].to_sym]}
+    %p#appstore
+      %a{:href => 'http://s.liap.us/everdesktop'}
+        Available on the Mac App Store
+
+#product-description
+  .container
+    %section
+      %h3 Mac を整理する
+      %p EverDesktop はステータスバーから Mac 上の散らかったファイルを整理します。
+    %section
+      %h3 Evernote にクリップ
+      %p ファイルはノートに添付され、埋込み表示されます。
+    %section
+      %h3 ファイルは移動するだけ
+      %p EverDesktop は、クリップしたあとのファイルを、日時ごとの個別のフォルダに移動します。
+
+.container
+  #how-it-works
+    %h2 動作イメージ
+    %iframe{ :width => "480", :height => "360", :src => "http://www.youtube.com/embed/grzLJosbAZ8", :frameborder => "0", :allowfullscreen => "allowfullscreen" }
+  
+  #bitbucket
+    %h2 バグを報告、機能リクエスト
+    %p
+      お気軽に課題を報告、または新機能をリクエストしてください。
+    %p
+      %a{:href => 'https://bitbucket.org/littleapps/everdesktop/issues'}
+        %i.icon-bug
+        BitBucket プロジェクトに課題を追加する。

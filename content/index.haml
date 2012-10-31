@@ -1,19 +1,39 @@
 ---
-title: Home
+alt_lang: '/ja/'
+lang: en
 ---
 
-%h1 A Brand New nanoc Site
+%header
+  .container
+    %h1#brand #{@site.config[:title]}
+    %h2#subtitle #{@site.config[:description][@item[:lang]]}
+    %p#appstore
+      %a{:href => 'http://s.liap.us/everdesktop'}
+        Available on the Mac App Store
 
-%p You’ve just created a new nanoc site. The page you are looking at right now is the home page for your site. To get started, consider replacing this default homepage with your own customized homepage. Some pointers on how to do so:
+#product-description
+  .container
+    %section
+      %h3 Keep your Mac tidy.
+      %p EverDesktop allows you to make tidy your Mac from status bar icon.
+    %section
+      %h3 Clip to Evernote.
+      %p Clipped files will be attached and embed in notes.
+    %section
+      %h3 Just moves files.
+      %p
+        After clipping files, EverDesktop moves them to new individual folders based on date and time.
 
-%ul
-  %li
+.container
+  #how-it-works
+    %h2 How it works
+    %iframe{ :width => "480", :height => "360", :src => "http://www.youtube.com/embed/grzLJosbAZ8", :frameborder => "0", :allowfullscreen => "allowfullscreen" }
+  
+  #bitbucket
+    %h2 Found bugs? Feature requests?
     %p
-      %strong Change this 
-      page’s content by editing the “index.html” file in the “content” directory. This is the actual page content, and therefore doesn’t include the header, sidebar or style information (those are part of the layout).
-  %li
+      Feel free to report problems or request features.
     %p
-      %strong Change the 
-      layout, which is the “default.html” file in the “layouts” directory, and create something unique (and hopefully less bland).
-
-%p If you need any help with customizing your nanoc web site, be sure to check out the documentation (see sidebar), and be sure to subscribe to the discussion group (also see sidebar). Enjoy!
+      %a{:href => 'https://bitbucket.org/littleapps/everdesktop/issues'}
+        %i.icon-bug
+        Create an issue at our BitBucket project.

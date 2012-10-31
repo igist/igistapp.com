@@ -1,3 +1,9 @@
+description:
+  en: 'A small Mac application for clipping files on your Desktop to Evernote.'
+  ja: 'ディスクトップ上にあるファイルを Evernote にクリップするための、<br />小さな Mac アプリケーション。'
+title: EverDesktop
+
+
 # A list of file extensions that nanoc will consider to be textual rather than
 # binary. If an item with an extension not in this list is found,  the file
 # will be considered as binary.

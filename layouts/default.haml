@@ -1,27 +1,33 @@
 !!! 5
-%html{:lang =>"en"}
+%html{:lang =>"#{@item[:lang]||'en'}"}
   %head
     %meta{:charset =>"utf-8"}
     %meta{:name =>"generator", :content =>"nanoc 3.1.7"}
     %title
-      = "Your Brand New - #{@item[:title]}"
+      = "EverDesktop - #{@site.config[:description][@item[:lang]]}"
     %link{:rel =>"stylesheet", :type =>"text/css", :href =>"/stylesheets/screen.css", :media =>"screen"}
     %link{:rel =>"stylesheet", :type =>"text/css", :href =>"http://fonts.googleapis.com/css?family=ABeeZee", :media =>"screen"}
   %body
     #main
       = yield
-    #sidebar
-      %h2 Documentation
-      %ul
-        %li
-          %a{:title => "documentation", :href => "http://nanoc.stoneship.org/docs/"}Documentation
-        %li
-          %a{:title => "Getting started", :href => "http://nanoc.stoneship.org/docs/3-getting-started/"}Getting Started
-      %h2 Community
-      %ul
-        %li
-          %a{:title => "Discussion Group", :href => "http://groups.google.com/group/nanoc/"}Discussion Group
-        %li
-          %a{:title => "IRC Channel", :href => "irc://chat.freenode.net/#nanoc"}IRC Channel
-        %li
-          %a{:title => "Wiki", :href => "http://projects.stoneship.org/trac/nanoc/"}Wiki
+    %footer
+      .container
+        - if @item[:alt_lang]
+          %ul#locales
+            - if 'ja'.eql? @item[:lang]
+              %li.en
+                %a{:href => @item[:alt_lang]} English
+              %li.ja
+                %em 日本語
+            - else
+              %li.en
+                %em English
+              %li.ja
+                %a{:href => @item[:alt_lang]} 日本語
+          
+            
+        %address
+          Copyright &copy; #{Time.now.year}
+          %a{:href => 'http://littleapps.jp/'}LittleApps Inc.
+          All rights reserved.
+      = google_analytics('UA-35921979-1')
