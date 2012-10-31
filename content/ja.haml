@@ -6,7 +6,7 @@ lang: ja
 %header
   .container
     %h1#brand #{@site.config[:title]}
-    %h2#subtitle #{@site.config[:description][@item[:lang].to_sym]}
+    %h2#subtitle #{ simple_line_break @site.config[:description][@item[:lang].to_sym] }
     %p#appstore
       = link_to('Available on the Mac App Store', 'http://s.liap.us/everdesktopjp')
 
@@ -26,11 +26,11 @@ lang: ja
   #how-it-works
     %h2 動作イメージ
     = youtube('grzLJosbAZ8')
-  
+
   #bitbucket
     %h2 バグを報告、機能リクエスト
     %p
       お気軽に課題を報告、または新機能をリクエストしてください。
     %p
       = link_to('<i class="icon-bug"></i> BitBucket プロジェクトに課題を追加する。', 'https://bitbucket.org/littleapps/everdesktop/issues')
-        
+

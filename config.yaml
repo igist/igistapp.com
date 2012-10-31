@@ -1,6 +1,9 @@
 description:
-  en: 'A small Mac application for clipping files on your Desktop to Evernote.'
-  ja: 'ディスクトップ上にあるファイルを Evernote にクリップするための、<br />小さな Mac アプリケーション。'
+  en: |
+    A small Mac application for clipping files on your Desktop to Evernote.
+  ja: |
+    ディスクトップ上にあるファイルを Evernote にクリップするための、
+    小さな Mac アプリケーション。
 title: EverDesktop
 
 

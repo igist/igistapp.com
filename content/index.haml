@@ -6,7 +6,7 @@ lang: en
 %header
   .container
     %h1#brand #{@site.config[:title]}
-    %h2#subtitle #{@site.config[:description][@item[:lang].to_sym]}
+    %h2#subtitle #{ simple_line_break @site.config[:description][@item[:lang].to_sym] }
     %p#appstore
       = link_to('Available on the Mac App Store', 'http://s.liap.us/everdesktop')
 
@@ -27,7 +27,7 @@ lang: en
   #how-it-works
     %h2 How it works
     = youtube('grzLJosbAZ8')
-  
+
   #bitbucket
     %h2 Found bugs? Feature requests?
     %p

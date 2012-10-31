@@ -3,8 +3,7 @@
   %head
     %meta{:charset =>"utf-8"}
     %meta{:name =>"generator", :content =>"nanoc 3.1.7"}
-    %title
-      = "EverDesktop - #{@site.config[:description][@item[:lang]]}"
+    %title EverDesktop - #{@site.config[:description][@item[:lang].to_sym].gsub(/\n/, '')}
     %link{:rel =>"stylesheet", :type =>"text/css", :href =>"/stylesheets/screen.css", :media =>"screen"}
     %link{:rel =>"stylesheet", :type =>"text/css", :href =>"http://fonts.googleapis.com/css?family=ABeeZee", :media =>"screen"}
   %body
@@ -24,8 +23,7 @@
                 %em English
               %li.ja
                 %a{:href => @item[:alt_lang]} 日本語
-          
-            
+
         %address
           Copyright &copy; #{Time.now.year}
           %a{:href => 'http://littleapps.jp/'}LittleApps Inc.
