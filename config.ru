@@ -1,12 +1,23 @@
 #
 # https://devcenter.heroku.com/articles/static-sites-on-heroku
 #
-use Rack::Static, 
+use Rack::Static,
   :urls => ["/stylesheets", "/images", "/javascripts"],
   :root => "public"
 
 run lambda { |env|
   path = env["PATH_INFO"]
+  p path
+  if path == '/favicon.ico'
+    return [
+      200,
+      {
+        'Content-Type'  => 'image/vnd.microsoft.icon',
+        'Cache-Control' => 'public, max-age=86400'
+      },
+      File.open("public/favicon.ico", File::RDONLY)
+    ]
+  end
   path = "#{path}/" unless path.end_with?('/')
   begin
     content = File.open("public#{path}index.html", File::RDONLY)
@@ -16,10 +27,10 @@ run lambda { |env|
     status = 404
   end
   [
-    status, 
+    status,
     {
-      'Content-Type'  => 'text/html', 
-      'Cache-Control' => 'public, max-age=86400' 
+      'Content-Type'  => 'text/html',
+      'Cache-Control' => 'public, max-age=86400'
     },
     content
   ]
