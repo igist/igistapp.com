@@ -8,8 +8,7 @@ lang: ja
     %h1#brand #{@site.config[:title]}
     %h2#subtitle #{@site.config[:description][@item[:lang].to_sym]}
     %p#appstore
-      %a{:href => 'http://s.liap.us/everdesktop'}
-        Available on the Mac App Store
+      = link_to('Available on the Mac App Store', 'http://s.liap.us/everdesktopjp')
 
 #product-description
   .container
@@ -33,6 +32,5 @@ lang: ja
     %p
       お気軽に課題を報告、または新機能をリクエストしてください。
     %p
-      %a{:href => 'https://bitbucket.org/littleapps/everdesktop/issues'}
-        %i.icon-bug
-        BitBucket プロジェクトに課題を追加する。
+      = link_to('<i class="icon-bug"></i> BitBucket プロジェクトに課題を追加する。', 'https://bitbucket.org/littleapps/everdesktop/issues')
+        
