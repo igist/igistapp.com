@@ -15,7 +15,7 @@ og:
     height: 1024
     type: 'image/png'
   url: 'http://everdesktop.com/'
-  type: software
+  type: article
 
 # A list of file extensions that nanoc will consider to be textual rather than
 # binary. If an item with an extension not in this list is found,  the file

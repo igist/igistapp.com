@@ -10,14 +10,16 @@
 - @og[:title]        ||=  @item[:title] || @site.config[:title]
 - @og[:description]  ||= @description
 - @og[:updated_time] ||= Time.now.nsec
+- @article = { author: 'http://ngs.io/', published_time: 1351734903170, modified_time: Time.now.nsec }
 -
-%html{:lang =>@lang, :'xmlns:og' => "http://ogp.me/ns#"}
+%html{:lang =>@lang, :prefix => "og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#"}
   %head
     %meta{:charset =>"utf-8"}
     %meta{:name =>"generator", :content =>"nanoc 3.1.7"}
     %meta{:name =>"description", :content => @description }
     %title #{@site.config[:title]} - #{@description}
     #{ og_tag(@og) }
+    #{ og_tag(@article, :article) }
     %link{:rel =>"stylesheet", :type =>"text/css", :href =>"/stylesheets/screen.css", :media =>"screen"}
     %link{:rel =>"stylesheet", :type =>"text/css", :href =>"http://fonts.googleapis.com/css?family=ABeeZee", :media =>"screen"}
   %body
