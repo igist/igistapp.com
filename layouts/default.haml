@@ -40,9 +40,12 @@
                 %em English
               %li.ja
                 %a{:href => @item[:alt_lang]} 日本語
-
+        %p.brand
+          = link_to('LittleApps Inc.', 'http://littleapps.jp/')
+          
         %address
           Copyright &copy; #{Time.now.year}
-          %a{:href => 'http://littleapps.jp/'}LittleApps Inc.
+          = link_to('LittleApps Inc.', 'http://littleapps.jp/')
           All rights reserved.
+
     = google_analytics('UA-35921979-1')
