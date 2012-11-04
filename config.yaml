@@ -4,8 +4,8 @@ title: 'iGist - The Gist Client'
 
 og:
   image:
-    '': 'http://igist.s3.amazonaws.com/icons/icon@2x.png'
-    secure_url: 'https://igist.s3.amazonaws.com/icons/icon@2x.png'
+    '': 'http://igist.s3.amazonaws.com/images/icon@2x.png'
+    secure_url: 'https://igist.s3.amazonaws.com/images/icon@2x.png'
     width: 512
     height: 512
     type: 'image/png'
