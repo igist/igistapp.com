@@ -1,5 +1,6 @@
 $:.unshift File.dirname(__FILE__)
 
+require 'coffee-filter'
 require 'nanoc'
 require 'nanoc/helpers/google_analytics'
 require 'nanoc/helpers/og_tags'

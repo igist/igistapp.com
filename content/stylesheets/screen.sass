@@ -6,12 +6,12 @@ body
   margin: 0
 
 a
-  color: #3daf8b
+  color: #fd7e08
   text-decoration: none
   +transition-property(color)
   +transition-duration(0.1s)
   &:hover
-    color: #47e4a9
+    color: #fdaf08
 
 #main
   background: #fff
@@ -26,12 +26,12 @@ a
 
 header
   .container
-    background: url(//everdesktop.s3.amazonaws.com/icons/icon_256x256.png) no-repeat 0 50%
-    background-size: 256px 256px
+    background: url(//igist.s3.amazonaws.com/images/icon.png) no-repeat 30px 50%
+    background-size: 200px 200px
     height: 306px
 
     @media only screen and (-webkit-min-device-pixel-ratio: 2),(-webkit-min-device-pixel-ratio: 1.5)
-      background-image: url(//everdesktop.s3.amazonaws.com/icons/icon_256x256@2x.png)
+      background-image: url(//igist.s3.amazonaws.com/images/icon@2x.png)
 
     h1
       padding: 80px 0 0 196px
@@ -52,9 +52,9 @@ header
         +transition-property(opacity)
         +transition-duration(0.5s)
         +opacity(0.8)
-        background: url(//everdesktop.s3.amazonaws.com/images/macappstore.png) no-repeat 0 0
+        background: url(//igist.s3.amazonaws.com/images/appstore.png) no-repeat 0 0
         @media only screen and (-webkit-min-device-pixel-ratio: 2),(-webkit-min-device-pixel-ratio: 1.5)
-          background-image: url(//everdesktop.s3.amazonaws.com/images/macappstore@2x.png)
+          background-image: url(//igist.s3.amazonaws.com/images/appstore@2x.png)
         background-size: 150px 45px
         display: block
         width: 150px
@@ -64,41 +64,43 @@ header
         &:hover
           +opacity(1.0)
 
-#product-description
-  +clearfix
-  padding-bottom: 5em
-  section
-    width: 31%
-    float: left
-    padding: 0 2% 2em 0
-    line-height: 1.5em
-    p
-      margin: 0
-      color: #888
-      display: inline
-    h3
-      font-size: 1em
-      margin: 0
-      display: inline
-      width: 11em
-      color: #333
-
 #how-it-works, #bitbucket
   padding-bottom: 5em
   float: left
   width: 48%
+  li
+    padding-bottom: 0.5em
 
 .icon-bug
   display: inline-block
   width: 11px
   height: 12px
-  background: url(//everdesktop.s3.amazonaws.com/images/icon-bug.png) repeat 0 0
+  background: url(//igist.s3.amazonaws.com/images/icon-bug.png) repeat 0 0
   background-size: 11px 23px
   a:hover &
     background-position: 0 -100%
   @media only screen and (-webkit-min-device-pixel-ratio: 2),(-webkit-min-device-pixel-ratio: 1.5)
-    background-image: url(//everdesktop.s3.amazonaws.com/images/icon-bug@2x.png)
+    background-image: url(//igist.s3.amazonaws.com/images/icon-bug@2x.png)
 
+#screen
+  .container
+    position: relative
+    height: 726px
+    background: url(//igist.s3.amazonaws.com/images/ipad.png) no-repeat 30px 0
+    background-size: 850px 666px
+    @media only screen and (-webkit-min-device-pixel-ratio: 2),(-webkit-min-device-pixel-ratio: 1.5)
+      background-image: url(//igist.s3.amazonaws.com/images/ipad@2x.png)
+    .screen-wrap
+      margin: 0
+      width: 692px
+      height: 519px
+      background: url(//igist.s3.amazonaws.com/images/poster.png) no-repeat 0 0
+      background-size: 692px 519px
+      @media only screen and (-webkit-min-device-pixel-ratio: 2),(-webkit-min-device-pixel-ratio: 1.5)
+        background-image: url(//igist.s3.amazonaws.com/images/poster@2x.png)
+      position: relative
+      top: 68px
+      left: 60px
 
 footer
   padding: 3em 0
@@ -128,7 +130,7 @@ footer
     margin: 0
     padding-bottom: 10px
     a
-      display: block
+      display: inline-block
       font-size: 1px
       text-indent: -9999px
       width: 283px
@@ -136,12 +138,12 @@ footer
       +transition-property(opacity)
       +transition-duration(0.5s)
       +opacity(0.3)
-      background: url(//everdesktop.s3.amazonaws.com/images/littleapps.png) no-repeat 0 0
+      background: url(//igist.s3.amazonaws.com/images/littleapps.png) no-repeat 0 0
       &:hover
         +opacity(0.8)
       
       @media only screen and (-webkit-min-device-pixel-ratio: 2),(-webkit-min-device-pixel-ratio: 1.5)
-        background-image: url(//everdesktop.s3.amazonaws.com/images/littleapps@2x.png)
+        background-image: url(//igist.s3.amazonaws.com/images/littleapps@2x.png)
       background-size: 283px 22px
       
 

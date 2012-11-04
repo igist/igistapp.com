@@ -8,6 +8,9 @@ GEM
     bluecloth (2.2.0)
     builder (3.1.4)
     chunky_png (1.2.6)
+    coffee-filter (0.1.1)
+      coffee-script (>= 2.2.0)
+      haml (>= 3.0.18)
     coffee-script (2.2.0)
       coffee-script-source
       execjs
@@ -52,6 +55,7 @@ DEPENDENCIES
   albino
   bluecloth
   builder
+  coffee-filter
   coffee-script
   compass
   haml

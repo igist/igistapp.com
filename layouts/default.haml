@@ -1,45 +1,35 @@
 !!! 5
 -
-- @lang = ( @item[:lang] || 'en').to_sym
-- @description = @site.config[:description][@lang].gsub(/\n/, '')
-- @locale     = @lang == :ja ? 'ja_JP' : 'en_US'
-- @alt_locale = @lang != :ja ? 'ja_JP' : 'en_US'
+- @description = @site.config[:description].gsub(/\n/, '')
 - @og = (@site.config[:og]||{}).dup.merge(@item[:og]||{})
-- @og[:locale]       = { '' => @locale, 'alternate' => @alt_locale }
+- @og[:locale]       = 'en_US'
 - @og[:site_name]    = @site.config[:title]
 - @og[:title]        ||=  @item[:title] || @site.config[:title]
 - @og[:description]  ||= @description
 - @og[:updated_time] ||= Time.now.nsec
 - @article = { author: 'http://ngs.io/', published_time: 1351734903170, modified_time: Time.now.nsec }
 -
-%html{:lang =>@lang, :prefix => "og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#"}
+%html{:lang =>'en', :prefix => "og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#"}
   %head
     %meta{:charset =>"utf-8"}
     %meta{:name =>"generator", :content =>"nanoc 3.1.7"}
     %meta{:name =>"description", :content => @description }
+    %meta{:name =>"apple-itunes-app", :content => "app-id=id517109617" }
     %title #{@site.config[:title]} - #{@description}
     #{ og_tag(@og) }
     #{ og_tag(@article, :article) }
-    %link{:rel =>"stylesheet", :type =>"text/css", :href =>"/stylesheets/screen.css", :media =>"screen"}
-    %link{:rel =>"stylesheet", :type =>"text/css", :href =>"http://fonts.googleapis.com/css?family=ABeeZee", :media =>"screen"}
+    %link{:rel =>"stylesheet", :type => "text/css", :href =>"/stylesheets/screen.css", :media =>"screen"}
+    %link{:rel =>"stylesheet", :type => "text/css", :href =>"//fonts.googleapis.com/css?family=ABeeZee", :media =>"screen"}
+    %link{:rel => "shortcut icon", :type => "image/x-icon", :href => "//igist.s3.amazonaws.com/favicon.ico"}
+    - %w{-72x72 -114x114 -144x144}.each do |size|
+      %link{:rel =>"apple-touch-icon-precomposed", :type =>"image/png", :href =>"//igist.s3.amazonaws.com/apple-touch-icon#{size}-precomposed.png"}
+    %script{:type => "text/javascript", :src => "/javascripts/app.js"}
   %body
-    = fb_root(@locale)
+    = fb_root('en_US')
     #main
       = yield
     %footer
       .container
-        - if @item[:alt_lang]
-          %ul#locales
-            - if @lang == :ja
-              %li.en
-                %a{:href => @item[:alt_lang]} English
-              %li.ja
-                %em 日本語
-            - else
-              %li.en
-                %em English
-              %li.ja
-                %a{:href => @item[:alt_lang]} 日本語
         %p.brand
           = link_to('LittleApps Inc.', 'http://littleapps.jp/')
           

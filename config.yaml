@@ -1,11 +1,6 @@
-description:
-  en: |
-    A small Mac application for clipping files on your Desktop to Evernote.
-  ja: |
-    ディスクトップ上にあるファイルを Evernote にクリップするための、
-    小さな Mac アプリケーション。
+description: 'Code anywhere with your iPhone and iPad.'
 
-title: EverDesktop
+title: 'iGist - The Gist Client'
 
 og:
   image:
@@ -14,7 +9,7 @@ og:
     width: 1024
     height: 1024
     type: 'image/png'
-  url: 'http://everdesktop.com/'
+  url: 'http://igistapp.com/'
   type: article
 
 # A list of file extensions that nanoc will consider to be textual rather than

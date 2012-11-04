@@ -1,39 +1,33 @@
 ---
-alt_lang: '/ja/'
-lang: en
 ---
 
 %header
   .container
     %h1#brand #{@site.config[:title]}
-    %h2#subtitle #{ simple_line_break @site.config[:description][:en] }
+    %h2#subtitle #{ @site.config[:description] }
     %p#appstore
       = link_to('Available on the Mac App Store', 'http://s.liap.us/everdesktop')
 
-#product-description
+#screen
   .container
-    %section
-      %h3 Keep your Mac tidy.
-      %p EverDesktop allows you to make tidy your Mac from status bar icon.
-    %section
-      %h3 Clip to Evernote.
-      %p Clipped files will be attached and embed in notes.
-    %section
-      %h3 Just moves files.
-      %p
-        After clipping files, EverDesktop moves them to new individual folders based on date and time.
+    .screen-wrap
+      :coffeescript
+        document.write videoHTML()
 
 .container
   #how-it-works
     %h2 How it works
-    = youtube('grzLJosbAZ8', 360, 270)
+    %ul
+      %li Login using GitHub's OAuth screen.
+      %li Browse Public, Starred and Your Gists.
+      %li Create, Edit, Delete and Fork Gists.
 
   #bitbucket
     %h2 Found bugs? Feature requests?
     %p
       Feel free to report problems or request features.
     %p
-      = link_to('<i class="icon-bug"></i> Create an issue on our BitBucket project.', 'https://bitbucket.org/littleapps/everdesktop/issues')
+      = link_to('<i class="icon-bug"></i> Create an issue on our GitHub project.', 'https://github.com/igist/igist.github.com/issues')
 #social
   .container
-    = fb_likebutton('https://www.facebook.com/EverDesktop')
+    = fb_likebutton('http://igistapp.com/')

@@ -16,4 +16,5 @@ group :development do
   gem 'rspec'
   gem 'sass'
   gem 'uglifier'
+  gem 'coffee-filter'
 end
