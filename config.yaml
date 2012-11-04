@@ -4,10 +4,10 @@ title: 'iGist - The Gist Client'
 
 og:
   image:
-    '': 'http://everdesktop.s3.amazonaws.com/icons/icon_512x512@2x.png'
-    secure_url: 'https://everdesktop.s3.amazonaws.com/icons/icon_512x512@2x.png'
-    width: 1024
-    height: 1024
+    '': 'http://igist.s3.amazonaws.com/icons/icon@2x.png'
+    secure_url: 'https://igist.s3.amazonaws.com/icons/icon@2x.png'
+    width: 512
+    height: 512
     type: 'image/png'
   url: 'http://igistapp.com/'
   type: article
