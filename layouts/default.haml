@@ -30,12 +30,13 @@
       = yield
     %footer
       .container
+        %p{:class => 'mixpanel'}
+          %a{:href => 'https://mixpanel.com/f/partner' }
+            %img{:src => '//cdn.mxpnl.com/site_media/images/partner/badge_light.png', :alt => 'Mobile Analytics'}
         %p.brand
           = link_to('LittleApps Inc.', 'http://littleapps.jp/')
-          
         %address
           Copyright &copy; #{Time.now.year}
           = link_to('LittleApps Inc.', 'http://littleapps.jp/')
           All rights reserved.
-
     = google_analytics('UA-30636846-2')
