@@ -24,14 +24,20 @@ a
   position: relative
   +clearfix
 
+.appicon
+  display: inline-block
+  +border-radius(15%)
+  +box-shadow(rgba(black, 0.5) 0 1px 10px)
+
 header
   .container
-    background: url(//igist.s3.amazonaws.com/images/icon.png) no-repeat 30px 50%
-    background-size: 200px 200px
     height: 306px
-
-    @media only screen and (-webkit-min-device-pixel-ratio: 2),(-webkit-min-device-pixel-ratio: 1.5)
-      background-image: url(//igist.s3.amazonaws.com/images/icon@2x.png)
+    position: relative
+    .appicon
+      float: left
+      position: absolute
+      top: 55px
+      left: 35px
 
     h1
       padding: 80px 0 0 196px
